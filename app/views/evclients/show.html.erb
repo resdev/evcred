@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Clientname:</b>
+  <%= @evclient.clientname %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @evclient.email %>
+</p>
+
+<p>
+  <b>Version:</b>
+  <%= @evclient.version %>
+</p>
+
+<p>
+  <b>Userid:</b>
+  <%= @evclient.userid %>
+</p>
+
+<p>
+  <b>Pwd:</b>
+  <%= @evclient.pwd %>
+</p>
+
+<p>
+  <b>Url:</b>
+  <%= @evclient.url %>
+</p>
+
+<p>
+  <b>Datechanged:</b>
+  <%= @evclient.datechanged %>
+</p>
+
+
+<%= link_to 'Edit', edit_evclient_path(@evclient) %> |
+<%= link_to 'Back', evclients_path %>

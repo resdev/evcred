@@ -1,0 +1,45 @@
+<%= form_for(@evclient) do |f| %>
+  <% if @evclient.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@evclient.errors.count, "error") %> prohibited this evclient from being saved:</h2>
+
+      <ul>
+      <% @evclient.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :clientname %><br />
+    <%= f.text_field :clientname %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :version %><br />
+    <%= f.text_field :version %>
+  </div>
+  <div class="field">
+    <%= f.label :userid %><br />
+    <%= f.text_area :userid %>
+  </div>
+  <div class="field">
+    <%= f.label :pwd %><br />
+    <%= f.text_area :pwd %>
+  </div>
+  <div class="field">
+    <%= f.label :url %><br />
+    <%= f.text_area :url %>
+  </div>
+  <div class="field">
+    <%= f.label :datechanged %><br />
+    <%= f.date_select :datechanged %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

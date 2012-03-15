@@ -1,0 +1,35 @@
+<h1>Listing evclients</h1>
+
+<table>
+  <tr>
+    <th>Clientname</th>
+    <th>Email</th>
+    <th>Version</th>
+    <th>Userid</th>
+    <th>Pwd</th>
+    <th>Url</th>
+    <th>Datechanged</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @evclients.each do |evclient| %>
+  <tr>
+    <td><%= evclient.clientname %></td>
+    <td><%= evclient.email %></td>
+    <td><%= evclient.version %></td>
+    <td><%= evclient.userid %></td>
+    <td><%= evclient.pwd %></td>
+    <td><%= evclient.url %></td>
+    <td><%= evclient.datechanged %></td>
+    <td><%= link_to 'Show', evclient %></td>
+    <td><%= link_to 'Edit', edit_evclient_path(evclient) %></td>
+    <td><%= link_to 'Destroy', evclient, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Evclient', new_evclient_path %>

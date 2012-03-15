@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  clientname: MyString
+  email: MyString
+  version: MyString
+  userid: MyText
+  pwd: MyText
+  url: MyText
+  datechanged: 2011-09-21
+
+two:
+  clientname: MyString
+  email: MyString
+  version: MyString
+  userid: MyText
+  pwd: MyText
+  url: MyText
+  datechanged: 2011-09-21
