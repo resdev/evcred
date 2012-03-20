@@ -21,6 +21,18 @@ class EvclientsController < ApplicationController
     end
   end
 
+  # GET /evclients/byuser/MMC1599
+  # GET /evclients/byuser/MMC1599.json
+  def byuser
+    @evclient = Evclient.find(:first, :conditions => [ "userid = ?", params[:userid]])
+    #@evclient = Evclient.find(params[:id])
+
+    respond_to do |format|
+      #format.html # show.html.erb
+      format.json { render json: @evclient }
+    end
+  end  
+
   # GET /evclients/new
   # GET /evclients/new.json
   def new

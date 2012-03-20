@@ -1,6 +1,7 @@
 Evcred::Application.routes.draw do
   resources :evclients
-
+  #match "account/overview/:id", :as => "overview"
+  match "/evclients/byuser/:userid" => "evclients#byuser"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
